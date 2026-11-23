@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Gold Terrain">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="theme-color" content="#1d1b16">
+<title>Gold Terrain</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="ecran-installation" class="ecran" hidden>
+  <h1>Gold Terrain</h1>
+  <p class="intro">Installez d’abord l’application. Rien n’est téléchargé tant qu’elle n’est pas installée.</p>
+  <ol class="etapes">
+    <li>Cette page doit être ouverte dans <strong>Safari</strong>.</li>
+    <li>Appuyer sur <strong>Partager</strong> (le carré avec une flèche vers le haut).</li>
+    <li>Choisir <strong>« Sur l’écran d’accueil »</strong>. Si le réglage <strong>« Ouvrir en tant qu’app web »</strong> apparaît, le laisser activé.</li>
+    <li>Ouvrir <strong>Gold Terrain</strong> depuis sa nouvelle icône, avec du Wi-Fi.</li>
+  </ol>
+  <p class="petit" id="autre-appareil" hidden>Sur un autre téléphone : menu du navigateur, puis « Installer l’application » ou « Ajouter à l’écran d’accueil ».</p>
+</section>
+
+<section id="ecran-phrase" class="ecran" hidden>
+  <h1>Gold Terrain</h1>
+  <p class="intro">Taper la phrase secrète (16 lettres et chiffres). Elle n’est demandée qu’une fois.</p>
+  <form id="form-phrase" autocomplete="off">
+    <label for="phrase">Phrase secrète</label>
+    <input id="phrase" name="phrase" type="text" inputmode="text" autocapitalize="none" autocorrect="off"
+           spellcheck="false" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+    <button type="submit" class="bouton-principal">Valider</button>
+    <button type="button" id="phrase-retour" class="bouton-secondaire retour" hidden>Revenir à la carte</button>
+  </form>
+  <p id="phrase-message" class="message" role="alert"></p>
+  <p class="petit">Les tirets et les espaces sont facultatifs. Il faut du réseau pour ce premier téléchargement.</p>
+</section>
+
+<section id="ecran-attente" class="ecran" hidden>
+  <h1>Gold Terrain</h1>
+  <p id="attente-message" class="intro">Chargement…</p>
+  <div class="barre"><div id="attente-barre"></div></div>
+  <p id="attente-erreur" class="message" role="alert"></p>
+  <button id="attente-reessayer" class="bouton-principal" hidden>Réessayer</button>
+</section>
+
+<section id="ecran-carte" hidden>
+  <header class="bandeau">
+    <div class="titre"><strong>Gold Terrain</strong> <span id="zone-nom"></span></div>
+    <div class="actions-haut">
+      <button id="bouton-dossier" class="bouton-secondaire" type="button">Dossier</button>
+      <button id="bouton-couches" class="bouton-secondaire" type="button">Couches</button>
+      <button id="bouton-etat" class="bouton-secondaire" type="button">État</button>
+    </div>
+  </header>
+  <div class="mentions">Information factuelle, pas un conseil. Pas un droit d’accès : vérifier sur TENGRAPH le jour même.</div>
+  <div id="fraicheur" class="fraicheur"></div>
+  <div id="carte-cadre">
+    <div id="carte"></div>
+    <div id="viseur" class="viseur" hidden aria-hidden="true"></div>
+    <div id="trace-indicateur" class="trace-indicateur" hidden>● Trace en cours</div>
+    <div id="frise-curseur" class="frise-curseur" hidden>
+      <label for="frise-annee">Année <strong id="frise-annee-texte"></strong></label>
+      <input id="frise-annee" type="range" min="0" max="0" step="1" value="0">
+    </div>
+  </div>
+  <nav class="barre-bas">
+    <button id="bouton-point" type="button">+ Point</button>
+    <button id="bouton-trace" type="button">Trace</button>
+    <button id="bouton-vehicule" type="button">Véhicule</button>
+    <button id="bouton-journal" type="button">Journal <span id="journal-badge" class="badge" hidden></span></button>
+    <button id="bouton-position" class="principal" type="button">Me localiser</button>
+  </nav>
+  <div class="legende">
+    <span><i class="pastille collier"></i>Sondage</span>
+    <span><i class="pastille secteur"></i>Secteur</span>
+    <span><i class="pastille verification"></i>À vérifier</span>
+    <span><i class="trait titre"></i>Titre minier</span>
+    <span class="legende-note">Un espace sans contour n’est pas une autorisation : vérifier sur TENGRAPH.</span>
+  </div>
+</section>
+
+<div id="pose" class="pose" hidden>
+  <p>Déplacer la carte pour placer la croix, puis :</p>
+  <div class="ligne-boutons">
+    <button id="pose-ici" type="button" class="bouton-principal">Poser à la croix</button>
+    <button id="pose-position" type="button" class="bouton-secondaire">À ma position</button>
+    <button id="pose-annuler" type="button" class="bouton-secondaire">Annuler</button>
+  </div>
+</div>
+
+<section id="panneau" class="panneau" hidden aria-live="polite">
+  <div class="panneau-haut">
+    <button id="panneau-retour" class="retour-panneau" type="button" hidden>‹ Retour</button>
+    <button class="fermer" type="button" id="panneau-fermer" aria-label="Fermer">×</button>
+  </div>
+  <div id="panneau-contenu"></div>
+  <p class="mentions-fiche">Information factuelle, pas un conseil. Pas un droit d’accès : vérifier sur TENGRAPH le jour même.</p>
+  <p id="panneau-fraicheur" class="fraicheur-fiche"></p>
+</section>
+
+<input id="photo-fichier" type="file" accept="image/*" capture="environment" hidden>
+<input id="gpx-fichier" type="file" accept=".gpx,application/gpx+xml,application/xml,text/xml" hidden>
+<div id="notification" class="notification" hidden role="status"></div>
+
+<script src="vendor/maplibre-gl.js"></script>
+<script src="vendor/pmtiles.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

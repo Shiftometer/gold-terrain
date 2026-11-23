@@ -1,0 +1,284 @@
+{
+  "format": "gold-terrain/1",
+  "app_min_version": 2,
+  "version": "20261123T171247Z",
+  "published_at": "2026-11-23T17:12:47+00:00",
+  "tenement_snapshot_date": "2026-11-18",
+  "kdf": {
+    "alg": "PBKDF2-SHA-256",
+    "iterations": 600000,
+    "salt": "8dwRVBNZpF9mRzBlAlMX6A=="
+  },
+  "key": {
+    "alg": "AES-GCM",
+    "iv": "rXa9KS4eYHggLqeN",
+    "wrapped": "ZCeTs/iY6togT1uh14vNO76gRp3d8xy1hNqs9aHWuzMay+Mmufs/k1rE4ntLFG9b",
+    "aad": "gold-terrain/1 cle de donnees"
+  },
+  "files": {
+    "lot": {
+      "path": "lot-3dab3d92502f1c98.enc",
+      "size": 1928550,
+      "sha256": "3dab3d92502f1c98f4fe86a1ae0394f09d68a60d83980c82d6f0703c8461801f",
+      "kind": "lot"
+    },
+    "carte": {
+      "path": "carte-60af67ac8dba3236.enc",
+      "size": 1340670,
+      "sha256": "60af67ac8dba3236cb77b8dedc028a34da9f3c8ea63ebe9c51a775ed0de1f8a3",
+      "kind": "pmtiles"
+    },
+    "satellite": {
+      "path": "satellite-c6efda2e72d159cc.enc",
+      "size": 13378359,
+      "sha256": "c6efda2e72d159cc4e7da4b79607953aef4715ff80acfaae0a747abdd28e1165",
+      "kind": "pmtiles"
+    },
+    "relief": {
+      "path": "relief-27b0dbe272c0b117.enc",
+      "size": 3274369,
+      "sha256": "27b0dbe272c0b117ce30939aa04a33a11f8c1821c04641902df1adb04145c0df",
+      "kind": "pmtiles"
+    },
+    "frise-1986": {
+      "path": "frise-1986-c122cf44d534d4d2.enc",
+      "size": 1471061,
+      "sha256": "c122cf44d534d4d2df8cc1295350d8c52142d320ea088a2af1745866c7a17e36",
+      "kind": "pmtiles"
+    },
+    "frise-1987": {
+      "path": "frise-1987-46608426d53b51f7.enc",
+      "size": 1378308,
+      "sha256": "46608426d53b51f7812bb127ae5e91a28c2982f8dccda2c7a934ca098db2f17e",
+      "kind": "pmtiles"
+    },
+    "frise-1988": {
+      "path": "frise-1988-d0a77c1524c7fe7b.enc",
+      "size": 1359906,
+      "sha256": "d0a77c1524c7fe7b6f24907f50fe1b6a8cd13deb344bbea0b9ea6a599b094777",
+      "kind": "pmtiles"
+    },
+    "frise-1989": {
+      "path": "frise-1989-0b4e40fc3001556c.enc",
+      "size": 1396909,
+      "sha256": "0b4e40fc3001556c5a51c8d979382fb688c5d79f05f5bb1c835b77b2ce9c5da7",
+      "kind": "pmtiles"
+    },
+    "frise-1990": {
+      "path": "frise-1990-a1a3ae2b32aea609.enc",
+      "size": 1399090,
+      "sha256": "a1a3ae2b32aea6095866afe5655cde01e54e6a0a13ff7bcb27ea46721fb3efed",
+      "kind": "pmtiles"
+    },
+    "frise-1991": {
+      "path": "frise-1991-811597a68884ad9c.enc",
+      "size": 1337427,
+      "sha256": "811597a68884ad9c31ad9189bab1f2dcf5ee0fc85ffa9a9e8c695ad17483abd2",
+      "kind": "pmtiles"
+    },
+    "frise-1992": {
+      "path": "frise-1992-77dc28cbc4a87edf.enc",
+      "size": 1316887,
+      "sha256": "77dc28cbc4a87edf0e9c2d4328496b10805e8505fe1179ffb55e95e00978339f",
+      "kind": "pmtiles"
+    },
+    "frise-1993": {
+      "path": "frise-1993-c3832e78440ed469.enc",
+      "size": 1330195,
+      "sha256": "c3832e78440ed469e510b72a4a9ba78656099848a61c2c15f0f1351805689cc3",
+      "kind": "pmtiles"
+    },
+    "frise-1994": {
+      "path": "frise-1994-83ed18fc30acb6bc.enc",
+      "size": 1423798,
+      "sha256": "83ed18fc30acb6bc35d425a933715529afb6ca41ccb03acd865e7066476bb328",
+      "kind": "pmtiles"
+    },
+    "frise-1995": {
+      "path": "frise-1995-815b97db9f5cbaa1.enc",
+      "size": 1506987,
+      "sha256": "815b97db9f5cbaa1a4169b98543dfc44a7fbfecec8b7978edd24188ac4672129",
+      "kind": "pmtiles"
+    },
+    "frise-1996": {
+      "path": "frise-1996-e993aeab7bc1dadb.enc",
+      "size": 1387197,
+      "sha256": "e993aeab7bc1dadb31aa9f230c580c61c18e1f0c518b5ab63c84cc8a8943a91c",
+      "kind": "pmtiles"
+    },
+    "frise-1997": {
+      "path": "frise-1997-8530add82364a954.enc",
+      "size": 1362718,
+      "sha256": "8530add82364a95478ab3543cd11c2369b52565c17f5854d5ca98652564f2958",
+      "kind": "pmtiles"
+    },
+    "frise-1998": {
+      "path": "frise-1998-cb750945ce3a8d06.enc",
+      "size": 1324091,
+      "sha256": "cb750945ce3a8d06035e29423fa4a99dc1aad92fb642a691aa0e62636fdbb809",
+      "kind": "pmtiles"
+    },
+    "frise-1999": {
+      "path": "frise-1999-14a217ba44418b85.enc",
+      "size": 1433131,
+      "sha256": "14a217ba44418b85712ea10b0b7721b464accb8878ee24893f8c0f6ad75c1b92",
+      "kind": "pmtiles"
+    },
+    "frise-2000": {
+      "path": "frise-2000-76a8f85c54af0e25.enc",
+      "size": 1369023,
+      "sha256": "76a8f85c54af0e259fd07bfc29d951428efe1ab575cf54b6021bed599f3c4310",
+      "kind": "pmtiles"
+    },
+    "frise-2001": {
+      "path": "frise-2001-a6f1fee7a994784a.enc",
+      "size": 1348093,
+      "sha256": "a6f1fee7a994784a05ca979e621d5af808a28f77de217d3f8556a12ca805d1fc",
+      "kind": "pmtiles"
+    },
+    "frise-2002": {
+      "path": "frise-2002-e7d5e15fe4dcd826.enc",
+      "size": 1330492,
+      "sha256": "e7d5e15fe4dcd826aa0f428f87d6923655da27c62c643d205733b94a526386e1",
+      "kind": "pmtiles"
+    },
+    "frise-2003": {
+      "path": "frise-2003-343a4b7e93566883.enc",
+      "size": 1411369,
+      "sha256": "343a4b7e9356688386adf006fb713234700961e2dee73bfa51f2e301ebae827c",
+      "kind": "pmtiles"
+    },
+    "frise-2004": {
+      "path": "frise-2004-b236c075f92fb67c.enc",
+      "size": 1406057,
+      "sha256": "b236c075f92fb67c9721587b672d4eecb828c998054d0bda91bc73e3885de320",
+      "kind": "pmtiles"
+    },
+    "frise-2005": {
+      "path": "frise-2005-1de37f8afe2dbf32.enc",
+      "size": 1431853,
+      "sha256": "1de37f8afe2dbf32bab070083877c9a4c5d4b9d2bed019a932f48d6c0365d155",
+      "kind": "pmtiles"
+    },
+    "frise-2006": {
+      "path": "frise-2006-43b624c211f584d5.enc",
+      "size": 1419574,
+      "sha256": "43b624c211f584d543a96331c029116e826a600aebb0be8880b20b73ad9e2c96",
+      "kind": "pmtiles"
+    },
+    "frise-2007": {
+      "path": "frise-2007-4aba1a319b2e4222.enc",
+      "size": 1403953,
+      "sha256": "4aba1a319b2e4222279507db223e72d3b2abf08aba49219f9314f7f1bb13c350",
+      "kind": "pmtiles"
+    },
+    "frise-2008": {
+      "path": "frise-2008-bc6e575d2cdbec37.enc",
+      "size": 1366449,
+      "sha256": "bc6e575d2cdbec374286be85d3ee0c2f055573248cfa87fb4a01462f3640a25d",
+      "kind": "pmtiles"
+    },
+    "frise-2009": {
+      "path": "frise-2009-a5048bc9267a344f.enc",
+      "size": 1376986,
+      "sha256": "a5048bc9267a344feb8443f0f85051d3341976f04db6d4c11c55674681cad930",
+      "kind": "pmtiles"
+    },
+    "frise-2010": {
+      "path": "frise-2010-ca337030cebaa4a2.enc",
+      "size": 1344580,
+      "sha256": "ca337030cebaa4a25dd14e2a1e2c59beea962acef6f47d66e2414b389eb0421d",
+      "kind": "pmtiles"
+    },
+    "frise-2011": {
+      "path": "frise-2011-230b0361f041c7df.enc",
+      "size": 1383597,
+      "sha256": "230b0361f041c7dffb77760a515708fc2b8a00fef03d68504e6f025d40694244",
+      "kind": "pmtiles"
+    },
+    "frise-2012": {
+      "path": "frise-2012-29b8d48cbec19ddd.enc",
+      "size": 1405864,
+      "sha256": "29b8d48cbec19ddd5ae662f2aa8d37e5407d3e30608b10e1ae84cdc0210b8133",
+      "kind": "pmtiles"
+    },
+    "frise-2013": {
+      "path": "frise-2013-dd3a4009a1ef0e9f.enc",
+      "size": 1486958,
+      "sha256": "dd3a4009a1ef0e9f7245b869c998fab3f87eced93261ec3c85dac9b3afff4bfa",
+      "kind": "pmtiles"
+    },
+    "frise-2014": {
+      "path": "frise-2014-08c2aef47d36cd77.enc",
+      "size": 1408303,
+      "sha256": "08c2aef47d36cd77ea28a6e3ee639330eadcba89af37cff287c1074e03863272",
+      "kind": "pmtiles"
+    },
+    "frise-2015": {
+      "path": "frise-2015-e63cb0c2c545a871.enc",
+      "size": 1395633,
+      "sha256": "e63cb0c2c545a871b872429f1031aa1b709fc1d04af58a7c3950987f337e0f1a",
+      "kind": "pmtiles"
+    },
+    "frise-2016": {
+      "path": "frise-2016-95812f1062230338.enc",
+      "size": 1428660,
+      "sha256": "95812f1062230338e041a013850cae4704cc1853801b5ad8ce79220fa4207430",
+      "kind": "pmtiles"
+    },
+    "frise-2017": {
+      "path": "frise-2017-ffe494a14a71d60f.enc",
+      "size": 1384527,
+      "sha256": "ffe494a14a71d60f9b9a5b30f60b4b55563a7c22d72dd5291bfcc2ea59d135fc",
+      "kind": "pmtiles"
+    },
+    "frise-2018": {
+      "path": "frise-2018-332ba68e372d6a15.enc",
+      "size": 1440499,
+      "sha256": "332ba68e372d6a154c93942575ca8b18049c38760a423a7363df0f6970ef9804",
+      "kind": "pmtiles"
+    },
+    "frise-2019": {
+      "path": "frise-2019-219df697a4af779e.enc",
+      "size": 1417994,
+      "sha256": "219df697a4af779e9cf25d8d15f279a0ee213bd22e6d4e10cc1c3592daa04670",
+      "kind": "pmtiles"
+    },
+    "frise-2020": {
+      "path": "frise-2020-27d62df4f18ed0de.enc",
+      "size": 1459266,
+      "sha256": "27d62df4f18ed0de75dc25539d56f616bb9c0398bfcd2ee1270d0b1aa1aef038",
+      "kind": "pmtiles"
+    },
+    "frise-2021": {
+      "path": "frise-2021-c45acfe41c1ee15a.enc",
+      "size": 1445943,
+      "sha256": "c45acfe41c1ee15a2476bd5cacfe7201abfbcf1966a206f8505c9978b42dbb0f",
+      "kind": "pmtiles"
+    },
+    "frise-2022": {
+      "path": "frise-2022-a2dde5142ef095f0.enc",
+      "size": 1421338,
+      "sha256": "a2dde5142ef095f05e1e8d64739beff6d239f55fe2743117022ff0cd6bf7d06c",
+      "kind": "pmtiles"
+    },
+    "frise-2023": {
+      "path": "frise-2023-5fea5600140f5faf.enc",
+      "size": 1415021,
+      "sha256": "5fea5600140f5faf1e07c7652d7536a5cdb2df6ddc96b9668271ca4fb2b8b7e5",
+      "kind": "pmtiles"
+    },
+    "frise-2024": {
+      "path": "frise-2024-df2522cf9b7dddbf.enc",
+      "size": 1445717,
+      "sha256": "df2522cf9b7dddbfe2672f975273d9fd064df7139505afc9b6fc3a686cae4463",
+      "kind": "pmtiles"
+    },
+    "frise-2025": {
+      "path": "frise-2025-31df7f06c3c0a998.enc",
+      "size": 1479482,
+      "sha256": "31df7f06c3c0a998f0755f767156e9640ce8c9da6aacb77fbefd0567e06c1e82",
+      "kind": "pmtiles"
+    }
+  }
+}
